@@ -23,7 +23,16 @@
       "es2018",
       "dom"
     ],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "paths":{
+      "crypto": ["./node_modules/crypto-browserify"],
+      "stream": ["./node_modules/stream-browserify"],
+      "assert": ["./node_modules/assert"],
+      "http": ["./node_modules/stream-http"],
+      "https": ["./node_modules/https-browserify"],
+      "os": ["./node_modules/os-browserify"],
+      "timers": ["./node_modules/timers-browserify"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -31,13 +40,5 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "paths":{
-    "crypto": ["./node_modules/crypto-browserify"],
-    "stream": ["./node_modules/stream-browserify"],
-    "assert": ["./node_modules/assert"],
-    "http": ["./node_modules/stream-http"],
-    "https": ["./node_modules/https-browserify"],
-    "os": ["./node_modules/os-browserify"],
-    "timers": ["./node_modules/timers-browserify"],
-  }
+
 }
