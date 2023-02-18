@@ -2,6 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -19,7 +20,7 @@
     "target": "es2015",
     "module": "es2020",
     "lib": [
-      "es2018", 
+      "es2018",
       "dom"
     ],
     "useDefineForClassFields": false
@@ -29,5 +30,14 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+  },
+  "paths":{
+    "crypto": ["./node_modules/crypto-browserify"],
+    "stream": ["./node_modules/stream-browserify"],
+    "assert": ["./node_modules/assert"],
+    "http": ["./node_modules/stream-http"],
+    "https": ["./node_modules/https-browserify"],
+    "os": ["./node_modules/os-browserify"],
+    "timers": ["./node_modules/timers-browserify"],
   }
 }
