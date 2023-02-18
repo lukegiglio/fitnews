@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Parser from 'rss-parser';
 import VConsole from 'vconsole';
+import { NewsService } from '../services/news.service';
 
 @Component({
   selector: 'app-home',
@@ -14,10 +15,10 @@ export class HomePage implements OnInit {
   vConsole = new VConsole();
 
 
-  constructor() {}
+  constructor(private newsService: NewsService) {}
 
   async ngOnInit() {
-    //this.news = await this.newsService.getNews();
+    this.news = await this.newsService.getNews();
     this.isDataLoaded = true;
   }
 
