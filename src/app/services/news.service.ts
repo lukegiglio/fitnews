@@ -22,7 +22,7 @@ export class NewsService {
 
   async parseUrl() {
     let feed: any;
-    await this.parser.parseURL(this.CORS_NEW + this.apiUrl)
+    await this.parser.parseURL(this.apiUrl)
     .then(result => {
       console.log('Result ok: ');
       console.log(result);
