@@ -16,12 +16,13 @@ export class NewsService {
   });
 
   CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+  CORS_NEW = "http://141.144.242.37:8080/"
 
     constructor() {}
 
   async parseUrl() {
     let feed: any;
-    await this.parser.parseURL(this.apiUrl)
+    await this.parser.parseURL(this.CORS_NEW + this.apiUrl)
     .then(result => {
       console.log('Result ok: ');
       console.log(result);
